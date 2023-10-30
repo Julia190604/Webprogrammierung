@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+body, html{
+    background-color: #c6dbda;
+    height: 100%;
+    margin: 0;
+}
+
+
+.header{
+    display: inline-block;
+    justify-content: space-between;
+    background-color: #effffe;
+    
+    padding: 1em;
+    margin: 0;
+    padding: 10px 20px;
+    
+    
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #effffe;  
+}
+
+.logo {
+    margin-right: 20px;
+    max-width: 100px;
+}
+
+.title {
+    margin: 0;
+    font-size: 24px;
+    color: #333; 
+}
+
+
+
+.info-container{
+    display: flex;
+    justify-content: space-between; /* verteilt die Elemente gleichmäßig im Container */
+    padding: 10px 20px;
+    background-color: #f5f5f5;    
+}
+
+.info-item {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px; /* ein wenig Abstand zwischen den Elementen */
+    font-size: 14px;
+    color: #333; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    margin-top: auto; /* Automatischer Abstand oben, um den Footer nach unten zu drücken */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-text {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.footer-copyright {
+    margin-top: 10px;
+    font-size: 12px;
+}

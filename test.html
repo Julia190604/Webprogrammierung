@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="teststyle.css" />
+    <title>Eden-Shop</title>
+    
+</head>
+
+<body>
+    <header class="main-header">
+        <img src="D:\UserData\z004mhwj\OneDrive - Siemens AG\Dokumente\GitHub\webprogrammierung\logo.png" alt="Logo" class="logo"></div>
+        <h1 class="title">Eden-Shop</h1>
+    </header>
+
+    <div class="content">
+        <div class="info">
+            <span>Kostenlose Lieferung ab 49€</span>
+            <span>Schneller Versand</span>
+            <span>90 Tage Rückgaberecht</span>
+        </div>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsa repellat dolorem amet iste provident consectetur asperiores illo delectus maiores!</p>
+        <!-- Rest des Inhalts ... -->
+    <!-- Suchleiste -->
+    <input type="text" id="searchInput" placeholder="Suchbegriff eingeben...">
+    <button onclick="fetchData()">Suchen</button>
+
+    <!-- Bereich für Suchergebnisse -->
+    <div id="results"></div>
+
+    <script>
+        function fetchData() {
+            const query = document.getElementById('searchInput').value;
+            fetch('https://dummyjson.com/products/1')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('results').innerHTML = JSON.stringify(data);
+                })
+                .catch(error => {
+                    console.error("Ein Fehler ist aufgetreten:", error);
+                });
+        }
+    </script>
+    </div>
+
+    <footer>
+        <p>AGB - Datenschutz - Impressum - Widerrufsbelehrung</p>
+        <p>Alle Preise inkl. der gesetzl. MwSt.</p>
+        <p>Copyright 2023 by Eden-Shop</p>
+    </footer>
+</body>
+
+</html>
