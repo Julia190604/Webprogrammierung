@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-    
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -12,7 +12,8 @@ body {
     background-color: #c6dbda;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* 100% der Bildschirmhöhe */
+    min-height: 100vh;
+    /* 100% der Bildschirmhöhe */
 }
 
 header {
@@ -22,7 +23,7 @@ header {
 .main-header {
     display: flex;
     align-items: center;
-    background-color: #effffe;  
+    background-color: #effffe;
 }
 
 .logo {
@@ -33,12 +34,12 @@ header {
 
 
 
-.info { 
+.info {
     padding: 0.625em 1.25em;
     background-color: #f5f5f5;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1em;     
+    margin-bottom: 1em;
 }
 
 
@@ -53,5 +54,6 @@ footer {
     color: #fff;
     padding: 1em;
     text-align: center;
-    margin-top: auto; /* Automatischer Abstand oben, um den Footer nach unten zu drücken */
+    margin-top: auto;
+    /* Automatischer Abstand oben, um den Footer nach unten zu drücken */
 }
