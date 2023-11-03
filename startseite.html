@@ -33,20 +33,8 @@
 
             <!-- Bereich für Suchergebnisse -->
             <div id="results"></div>
-
-            <script>
-                function fetchData() {
-                    const query = document.getElementById('searchInput').value;
-                    fetch('https://dummyjson.com/products/1')
-                        .then(response => response.json())
-                        .then(data => {
-                            document.getElementById('results').innerHTML = JSON.stringify(data);
-                        })
-                        .catch(error => {
-                            console.error("Ein Fehler ist aufgetreten:", error);
-                        });
-                }
-            </script>
+            <script src="script.js"></script>
+            
         </div>
     </div>
 
