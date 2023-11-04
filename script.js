@@ -11,9 +11,9 @@ document.querySelector('.search').addEventListener('submit', function(event) {
 
 
 
-function fetchData() {
+function fetchData(searchInput) {
     const query = document.getElementById('searchInput').value;
-    fetch('https://dummyjson.com/products/1')
+    fetch('https://dummyjson.com/products/search?q=${searchInput}')
         .then(response => response.json())
         .then(data => {
             document.getElementById('results').innerHTML = JSON.stringify(data);
