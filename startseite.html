@@ -23,18 +23,23 @@
             <span>90 Tage Rückgaberecht</span>
         </div>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsa repellat dolorem amet iste provident
-            consectetur asperiores illo delectus maiores!</p>
-        <!-- Rest des Inhalts ... -->
+      
         <!-- Suchleiste -->
-        <div class="search">
-            <input type="text" id="searchInput" placeholder="Suchbegriff eingeben...">
-            <button onclick="fetchData()">Suchen</button>
-
-            <!-- Bereich für Suchergebnisse -->
-            <div id="results"></div>
-            <script src="script.js"></script>
+        <div id="search-section">
+            <div id="hint-text" style="text-align: center; margin-top: 0px;">
+                Wonach suchen Sie?
+            </div>
+            <div class="search-bar">
+                <input type="search" name="search" pattern=".*\S.*" required="">
+                <button class="submit" type="button">
+                    <span>Search</span>
+                </button>
+            </div>
             
+            <div id="search-results-container" class="scroll-view">
+                <div id="search-results"></div>
+            </div>
+            <script src="script.js"></script>
         </div>
     </div>
 
