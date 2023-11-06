@@ -25,56 +25,26 @@ function fetchData(query) {
 function displayResults(data) {
     const resultsContainer = document.getElementById('search-results');
     resultsContainer.innerHTML = ''; // Vorherige Suchergebnisse löschen
-    console.log(data)
-    data = data.products;
-    console.log(data)
+
     if (data && data.length > 0) {
         data.forEach(product => {
             const productDiv = document.createElement('div');
     
             // Produktbild
             const productImg = document.createElement('img');
-            productImg.src = product.images[0];
-            productImg.alt = product.title;
-            productImg.addEventListener("click", function(){
-                displayProductDetails(product);
-            })
+            productImg.src = product.imageURL;
+            productImg.alt = product.name;
             productDiv.appendChild(productImg);
     
             // Produktlink
-            const productName = document.createElement('span');
-            productName.innerHTML = product.title;
-            productDiv.appendChild(productName);
-            
-            const productDetails = document.createElement('div');
-            productDetails.setAttribute("id", `product-details-${product.id}`);
-           
+            const productLink = document.createElement('a');
+            productLink.href = `product-details.html?id=${product.id}`;
+            productLink.textContent = product.name;
+            productDiv.appendChild(productLink);
+    
             resultsContainer.appendChild(productDiv);
-            resultsContainer.appendChild(productDetails);
-
         });
     } else {
         resultsContainer.innerHTML = '<p>Keine Produkte gefunden.</p>';
-    }
-}
-
-
-function displayProductDetails(product) {
-    const content = document.getElementById(`product-details-${product.id}`);
-    if(content.textContent.length==0){
-      let productHtml = `
-        <p>${product.description}</p>
-        <p>Preis: $${product.price}</p>
-        <p>Rabatt: ${product.discountPercentage}%</p>
-        <p>Bewertung: ${product.rating}</p>
-        <p>Verfügbarer Bestand: ${product.stock}</p>
-        <p>Marke: ${product.brand}</p>
-        <p>Kategorie: ${product.category}</p>
-    `;
-
-    content.innerHTML = productHtml;  
-    }
-    else{
-        content.innerHTML = "";
     }
 }
